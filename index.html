@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first-cube">
+        <div class="cube">
+          <div class="d1"></div>
+          <div class="d2"></div>
+          <div class="d3"></div>
+        </div>
+      </div>
+
+      <div class="second-cube">
+        <div class="cube">
+          <div class="d1"></div>
+          <div class="d2"></div>
+          <div class="d3"></div>
+        </div>
+      </div>
+
+      <div class="thrid-cube">
+        <div class="cube">
+          <div class="d1"></div>
+          <div class="d2"></div>
+          <div class="d3"></div>
+        </div>
+      </div>
+
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .cube {
+    position: relative;
+    width: 150px;
+    height: 175px;
+    outline: 1px solid red;
+  }
+
+  .cube .d1 {
+    position: relative;
+    top: 70px;
+    left: 0px;
+    transform: skew(0deg, 30deg);
+    width: calc(100px * 1.4 / 2);
+    background-color: #519068;
+    height: 85px;
+  }
+
+  .cube .d2 {
+    position: relative;
+    top: -15px;
+    left: 80px;
+    transform: skew(0deg, -30deg);
+    width: 70px;
+    background-color: #519068;
+    height: 85px;
+  }
+
+  .cube .d3 {
+    position: relative;
+    top: -150px;
+    left: 40px;
+    transform: skew(-60deg, 30deg);
+    width: 70px;
+    background-color: #519068;
+    height: 40px;
+  }
+
+  .cube-style-end {
+  }
+
+  .first-cube {
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    animation: 1s linear 1s infinite move;
+  }
+
+  .second-cube {
+    position: absolute;
+    top: 450px;
+    left: 750px;
+    animation: 1s linear 2s infinite move;
+  }
+
+  .thrid-cube {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    animation: 1s linear 3s infinite move;
+  }
+
+  @keyframes move {
+    0% {
+      opacity: 0.8;
+    }
+
+    60% {
+      opacity: 0.5;
+      top: 150px;
+      left: 400px;
+    }
+
+    70% {
+      opacity: 0.5;
+    }
+    80% {
+      opacity: 0.2;
+    }
+    90% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+
+      top: 150px;
+      left: 400px;
+    }
+  }
+
+  @keyframes oppas {
+    100% {
+      opacity: 0;
+      top: 150px;
+      left: 400px;
+    }
+  }
+</style>
